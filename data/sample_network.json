@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "source": "synthetic",
+    "description": "Small synthetic citation network for tests and demos. Titles, authors and counts are fictional and do not describe real publications.",
+    "license": "CC0-1.0"
+  },
+  "papers": [
+    {"id": "P01", "title": "A Statistical Model of Citation Networks", "year": 1998, "authors": ["L. Moreau"], "cited_by_count": 5200, "references": []},
+    {"id": "P02", "title": "Link Analysis for Scholarly Retrieval", "year": 2003, "authors": ["S. Tanaka", "L. Moreau"], "cited_by_count": 2100, "references": ["P01"]},
+    {"id": "P03", "title": "Topic Discovery in Research Corpora", "year": 2006, "authors": ["R. Oyelaran"], "cited_by_count": 1850, "references": ["P01"]},
+    {"id": "P04", "title": "Co-citation Clustering at Scale", "year": 2009, "authors": ["M. Lindqvist"], "cited_by_count": 960, "references": ["P01", "P02"]},
+    {"id": "P05", "title": "Measuring Influence Beyond Citation Counts", "year": 2011, "authors": ["S. Tanaka"], "cited_by_count": 740, "references": ["P02", "P03"]},
+    {"id": "P06", "title": "Embedding Scientific Abstracts", "year": 2013, "authors": ["A. Bekova", "R. Oyelaran"], "cited_by_count": 1320, "references": ["P03"]},
+    {"id": "P07", "title": "Visual Exploration of Citation Graphs", "year": 2015, "authors": ["J. Carvalho"], "cited_by_count": 610, "references": ["P02", "P04"]},
+    {"id": "P08", "title": "Community Detection in Bibliographic Networks", "year": 2016, "authors": ["M. Lindqvist", "D. Park"], "cited_by_count": 480, "references": ["P04", "P05"]},
+    {"id": "P09", "title": "Neural Representations of Scholarly Documents", "year": 2018, "authors": ["A. Bekova"], "cited_by_count": 890, "references": ["P06", "P03"]},
+    {"id": "P10", "title": "Interactive Literature Maps", "year": 2019, "authors": ["J. Carvalho", "N. Esenova"], "cited_by_count": 350, "references": ["P07", "P08", "P04"]},
+    {"id": "P11", "title": "Contrastive Learning for Paper Similarity", "year": 2020, "authors": ["D. Park"], "cited_by_count": 410, "references": ["P09", "P06"]},
+    {"id": "P12", "title": "Scalable Layouts for Large Citation Networks", "year": 2021, "authors": ["J. Carvalho"], "cited_by_count": 190, "references": ["P07", "P10"]},
+    {"id": "P13", "title": "Evaluating Literature Discovery Tools", "year": 2022, "authors": ["N. Esenova", "S. Tanaka"], "cited_by_count": 120, "references": ["P10", "P11", "P05"]},
+    {"id": "P14", "title": "Reproducible Pipelines for Bibliometrics", "year": 2023, "authors": ["R. Oyelaran", "D. Park"], "cited_by_count": 45, "references": ["P13", "P12", "P01", "X99"]}
+  ]
+}
