@@ -1,0 +1,87 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "citemap-core"
+version = "0.1.0"
+description = "Citation network analysis for the CiteMap research tool: graph building, PageRank ranking and export."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Takayev Askhat" }]
+keywords = ["bibliometrics", "citation network", "pagerank", "openalex", "scientometrics"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+  "Typing :: Typed",
+]
+dependencies = [
+  "networkx>=3.1",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=5.0",
+  "ruff>=0.6",
+  "mypy>=1.10",
+  "types-networkx",
+  "build>=1.2",
+  "twine>=6.1",
+]
+
+[project.scripts]
+citemap = "citemap.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/YOUR-USERNAME/citemap-core"
+Repository = "https://github.com/YOUR-USERNAME/citemap-core"
+Issues = "https://github.com/YOUR-USERNAME/citemap-core/issues"
+Changelog = "https://github.com/YOUR-USERNAME/citemap-core/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/citemap"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "data", "README.md", "LICENSE", "CITATION.cff", "CHANGELOG.md"]
+
+# ---------------------------------------------------------------- testing
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers -m 'not network'"
+markers = ["network: calls the real OpenAlex API (deselected by default, run with -m network)"]
+
+[tool.coverage.run]
+source = ["citemap"]
+branch = true
+omit = ["*/__main__.py"]  # exercised through a subprocess in test_cli.py
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 90
+exclude_also = ["if __name__ == .__main__.:", "raise SystemExit"]
+
+# ---------------------------------------------------------------- linting
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF", "PT"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src"]
