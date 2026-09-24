@@ -8,12 +8,16 @@ except PackageNotFoundError:  # pragma: no cover - only when run from an uninsta
     __version__ = "0.0.0+local"
 
 from citemap.dataset import DatasetError, load_dataset, save_dataset
+from citemap.graph import build_citation_graph, filter_by_min_citations, filter_by_year
 from citemap.models import Paper
 
 __all__ = [
     "DatasetError",
     "Paper",
     "__version__",
+    "build_citation_graph",
+    "filter_by_min_citations",
+    "filter_by_year",
     "load_dataset",
     "save_dataset",
 ]
