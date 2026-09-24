@@ -82,6 +82,10 @@ src = ["src", "tests"]
 select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF", "PT"]
 
 [tool.mypy]
-python_version = "3.10"
+# No fixed python_version: mypy checks against the interpreter it runs on.
+# Pinning 3.10 breaks on Python 3.12+, where numpy (pulled in through the
+# networkx stubs) ships stubs written with 3.12-only syntax. Compatibility
+# with 3.10 is still enforced by ruff (target-version) and by the CI test
+# matrix, which runs the suite on 3.10.
 strict = true
 files = ["src"]
