@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it using the metadata below."
-title: "citemap-core: citation network analysis for the CiteMap research tool"
+message: 'If you use this software, please cite it using the metadata below.'
+title: 'citemap-core: citation network analysis for the CiteMap research tool'
 type: software
 authors:
   - family-names: Takayev
@@ -9,7 +9,7 @@ authors:
 version: 0.1.0
 date-released: 2026-09-24
 license: MIT
-repository-code: "https://github.com/YOUR-USERNAME/citemap-core"
+repository-code: 'https://github.com/verozroke/citemap-core'
 abstract: >-
   A Python package that builds directed citation graphs from bibliographic
   records, ranks papers by PageRank influence, filters networks by year and

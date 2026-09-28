@@ -1,6 +1,6 @@
 # citemap-core
 
-[![CI](https://github.com/YOUR-USERNAME/citemap-core/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/citemap-core/actions/workflows/ci.yml)
+[![CI](https://github.com/verozroke/citemap-core/actions/workflows/ci.yml/badge.svg)](https://github.com/verozroke/citemap-core/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -35,7 +35,7 @@ research area before writing a literature review.
 Requires Python 3.10 or newer.
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/citemap-core.git
+git clone https://github.com/verozroke/citemap-core.git
 cd citemap-core
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
@@ -102,7 +102,7 @@ write_graph_json(graph, "graph.json")
 
 ```json
 {
-  "meta": {"source": "OpenAlex", "seed": "W2741809807"},
+  "meta": { "source": "OpenAlex", "seed": "W2741809807" },
   "papers": [
     {
       "id": "W2741809807",
@@ -169,10 +169,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the branch and commit conventions.
 
 ## Continuous integration and delivery
 
-| Workflow | Trigger | What it does |
-|---|---|---|
-| [`ci.yml`](.github/workflows/ci.yml) | push to `main`, pull request | lint, format check, strict mypy; tests on Python 3.10 to 3.13 (Linux) and 3.12 (Windows, macOS) with a coverage gate; builds and smoke tests the wheel |
-| [`release.yml`](.github/workflows/release.yml) | tag `v*.*.*` | checks tag against package version, re-runs tests, builds, publishes a GitHub Release with the wheel and sdist |
+| Workflow                                       | Trigger                      | What it does                                                                                                                                           |
+| ---------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`ci.yml`](.github/workflows/ci.yml)           | push to `main`, pull request | lint, format check, strict mypy; tests on Python 3.10 to 3.13 (Linux) and 3.12 (Windows, macOS) with a coverage gate; builds and smoke tests the wheel |
+| [`release.yml`](.github/workflows/release.yml) | tag `v*.*.*`                 | checks tag against package version, re-runs tests, builds, publishes a GitHub Release with the wheel and sdist                                         |
 
 Dependabot opens weekly pull requests for outdated Python packages and
 GitHub Actions, and each of those pull requests goes through the CI pipeline.

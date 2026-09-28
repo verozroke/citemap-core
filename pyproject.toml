@@ -44,10 +44,10 @@ dev = [
 citemap = "citemap.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/YOUR-USERNAME/citemap-core"
-Repository = "https://github.com/YOUR-USERNAME/citemap-core"
-Issues = "https://github.com/YOUR-USERNAME/citemap-core/issues"
-Changelog = "https://github.com/YOUR-USERNAME/citemap-core/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/verozroke/citemap-core"
+Repository = "https://github.com/verozroke/citemap-core"
+Issues = "https://github.com/verozroke/citemap-core/issues"
+Changelog = "https://github.com/verozroke/citemap-core/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/citemap"]
